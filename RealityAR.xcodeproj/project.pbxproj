@@ -11,6 +11,9 @@
 		3E43FE832BE512C7006E48F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43FE822BE512C7006E48F3 /* ContentView.swift */; };
 		3E43FE852BE512C8006E48F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E43FE842BE512C8006E48F3 /* Assets.xcassets */; };
 		3E43FE882BE512C8006E48F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E43FE872BE512C8006E48F3 /* Preview Assets.xcassets */; };
+		3E9280BF2BE51706003559AD /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9280BE2BE51706003559AD /* ARViewContainer.swift */; };
+		3E9280C12BE51711003559AD /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9280C02BE51711003559AD /* SheetView.swift */; };
+		3E9280C32BE51BC3003559AD /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3E9280C22BE51BC3003559AD /* toy_car.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		3E43FE822BE512C7006E48F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E43FE842BE512C8006E48F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E43FE872BE512C8006E48F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E9280BD2BE515E8003559AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E9280BE2BE51706003559AD /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		3E9280C02BE51711003559AD /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		3E9280C22BE51BC3003559AD /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		3E43FE7F2BE512C7006E48F3 /* RealityAR */ = {
 			isa = PBXGroup;
 			children = (
+				3E9280BD2BE515E8003559AD /* Info.plist */,
 				3E43FE802BE512C7006E48F3 /* RealityARApp.swift */,
+				3E9280BE2BE51706003559AD /* ARViewContainer.swift */,
+				3E9280C02BE51711003559AD /* SheetView.swift */,
 				3E43FE822BE512C7006E48F3 /* ContentView.swift */,
+				3E9280C22BE51BC3003559AD /* toy_car.usdz */,
 				3E43FE842BE512C8006E48F3 /* Assets.xcassets */,
 				3E43FE862BE512C8006E48F3 /* Preview Content */,
 			);
@@ -127,6 +138,7 @@
 			files = (
 				3E43FE882BE512C8006E48F3 /* Preview Assets.xcassets in Resources */,
 				3E43FE852BE512C8006E48F3 /* Assets.xcassets in Resources */,
+				3E9280C32BE51BC3003559AD /* toy_car.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +151,8 @@
 			files = (
 				3E43FE832BE512C7006E48F3 /* ContentView.swift in Sources */,
 				3E43FE812BE512C7006E48F3 /* RealityARApp.swift in Sources */,
+				3E9280C12BE51711003559AD /* SheetView.swift in Sources */,
+				3E9280BF2BE51706003559AD /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +289,8 @@
 				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RealityAR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for Augmented Reality";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +320,8 @@
 				DEVELOPMENT_TEAM = WLW428B75Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RealityAR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for Augmented Reality";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
