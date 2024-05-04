@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SheetView: View {
     @Binding var isPresented : Bool
-    @State var modelName : String = "toy_car"
+    @Binding var modelName : String
     
     
     //A close button is added to the top trailing corner of the view. When tapped, it toggles the isPresented binding to dismiss the sheet. The button is styled using an image of an "xmark.circle" from SF Symbols, with a large title font, black color, and a circular shape. It also has a background of .ultraThinMaterial to provide a subtle visual effect. Padding is applied to ensure proper spacing around the button.
@@ -37,5 +37,5 @@ struct SheetView: View {
 }
 
 #Preview {
-    SheetView(isPresented: .constant(true))
+    SheetView(isPresented: .constant(true), modelName: .constant("toy_car"))
 }

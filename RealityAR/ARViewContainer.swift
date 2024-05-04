@@ -9,7 +9,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 
-struct ARViewContainer : UIViewRepresentable {
+struct ARViewContainer: UIViewRepresentable {
     @Binding var modelName: String
     
     //an ARView instance is created and configured with ARWorldTrackingConfiguration, that tracks the position of a device in relation to objects in the environment.
@@ -29,7 +29,7 @@ struct ARViewContainer : UIViewRepresentable {
     //this updates the view, in which the AR content is also updated. AnchorEntity is created for the content hierarchy. Anchor entities control how to place virtual objects into your scene. It means that if you want to change the position, you have to go in makeUIView
     func updateUIView(_ uiView: ARView, context: Context) {
         
-        let anchorEntity = AnchorEntity()
+        let anchorEntity = AnchorEntity(world: .zero)
         
         guard let modelEntity = try? Entity.loadModel(named: modelName) else { return }
         
