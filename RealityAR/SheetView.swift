@@ -11,14 +11,17 @@ struct SheetView: View {
     @Binding var isPresented : Bool
     @State var modelName : String = "toy_car"
     
+    
+    //A close button is added to the top trailing corner of the view. When tapped, it toggles the isPresented binding to dismiss the sheet. The button is styled using an image of an "xmark.circle" from SF Symbols, with a large title font, black color, and a circular shape. It also has a background of .ultraThinMaterial to provide a subtle visual effect. Padding is applied to ensure proper spacing around the button.
+    
     var body: some View {
-        // 1.
+        //the ZStack overlays the AR view with a close button. Inside the ZStack the ARViewContainer is presented using the modelName state variable.
         ZStack(alignment: .topTrailing) {
 
             ARViewContainer(modelName: $modelName)
                 .ignoresSafeArea(edges: .all)
 
-            // 2.
+            //A close button is added to toggle dismiss the view sheet.
             Button() {
                 isPresented.toggle()
             } label: {

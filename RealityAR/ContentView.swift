@@ -8,38 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+    
     @State var isPresented: Bool = false
-
+    
     var body: some View {
+        
+        //DA VIEW
         VStack {
-            // 1.
+            
             Image("plane")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.tint)
                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
                 .padding(24)
-
-            // 2.
+            
             Button {
                 isPresented.toggle()
-                    } label: {
-                        Label("View in AR", systemImage: "arkit")
-                    }.buttonStyle(BorderedProminentButtonStyle())
-                .padding(24)
-
-
+            } label: {
+                Image(systemName: "arkit")
+                Text("Open AR")
+            }
+            .buttonStyle(BorderedProminentButtonStyle())
+            .padding(24)
+            
+            
         }
-                .padding()
-                
+        .padding()
+        
         // 3.
         .fullScreenCover(isPresented: $isPresented, content: {
-           SheetView(isPresented: $isPresented)
+            SheetView(isPresented: $isPresented)
         })
         
     }
-
+    
 }
 
 #Preview {
